@@ -8,10 +8,10 @@ tell application "System Events"
 		tell application process "System Preferences"
 			get properties
 			
-			click radio button "Keyboard" of tab group 1 of window "Keyboard"
-			click checkbox "Use all F1, F2, etc. keys as standard function keys" of tab group 1 of window "Keyboard"
+			click radio button "Tastatur" of tab group 1 of window "Tastatur"
+			click checkbox "Die Tasten F1, F2 usw. als Standard-Funktionstasten verwenden" of tab group 1 of window "Tastatur"
 			set messageToShow to "Function keys set to "
-			if (value of checkbox "Use all F1, F2, etc. keys as standard function keys" of tab group 1 of window "Keyboard") as boolean then
+			if (value of checkbox "Die Tasten F1, F2 usw. als Standard-Funktionstasten verwenden" of tab group 1 of window "Tastatur") as boolean then
 				set messageToShow to messageToShow & "standard function keys."
 			else
 				set messageToShow to messageToShow & "media/hardware controls."
@@ -42,3 +42,4 @@ tell application "System Events"
 		end tell
 	end if
 end tell
+
